@@ -1,0 +1,475 @@
+*, *::before,*::after{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: #005BBB;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 32px;
+    padding: 48px 60px;
+    position: relative;
+}
+
+.logo {
+    width: 68px;
+    height: 59px;
+    display: block;
+    margin: 0 auto 80px;
+    position: relative;
+    z-index: 999;
+}
+
+.btn-burger {
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: 60px;
+    border: 0;
+    background: none;
+}
+
+.header-navigation {
+    z-index: 99;
+}
+
+.dropdown {
+    display: none;
+}
+
+.btn-close {
+    position: absolute;
+    top: 48px;
+    right: 60px;
+    border: 0;
+    background: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a+a {
+    margin-left: 80px;
+}
+
+.item {
+    color: #005BBB;
+    font-size: 20px;
+}
+
+.main-section {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.slider {
+    padding-top: 32px;
+}
+
+.gallery img{
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-image: linear-gradient(to bottom, #005BBB 50%, #FFD500 50%) 1 1;
+}
+
+.slick-dots {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots li + li {
+    margin-left: 16px;
+}
+
+.slick-dots button {
+    color: transparent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 1px #005BBB;
+    background-color: #fff;
+}
+
+.slick-active button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #005BBB;
+}
+
+.about {
+    padding-top: 80px;
+}
+
+.about-text {
+    line-height: 140%;
+    font-weight: 400;
+}
+
+.about .about-text + .about-text {
+    padding-top: 16px;
+}
+
+.history {
+    padding-top: 96px;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    position: relative;
+}
+
+.section-title:before,
+.section-title:after {
+    content: " ";
+    width: 1024px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    position: absolute;
+    top: -16px;
+    left: 0;
+}
+
+.section-title:after {
+    width: 500px;
+    top: 65px;
+    left: 262px;
+}
+
+.history-parts {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-part {
+    display: flex;
+    align-items: center;
+    flex: 0 0 500px;
+    border-left: solid 10px #FFD500;
+    background-color: #005BBB;
+}
+
+.history-text {
+    padding: 40px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+.history-text span {
+    font-size: 48px;
+}
+
+.about-us {
+    padding-top: 96px;
+    padding-bottom: 160px;
+}
+
+.form-message {
+    margin-top: 56px;
+    max-width: 1024px;
+    border: solid 1px #005BBB;
+}
+
+.form {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-message {
+    font-size: 18px;
+    color:#005BBB;
+    padding: 10px;
+}
+
+.text-message:focus {
+    border: solid 1px #005BBB;
+    outline: none;
+}
+
+.btn-send {
+    cursor: pointer;
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 0.06em;
+    padding: 13px 56px;
+    text-transform: uppercase;
+    background-color: #005BBB;
+    max-height: 60px;
+    transition: all 0.5s ease;
+}
+
+.btn-send:hover {
+    background-color: #0050a7;
+}
+
+/* Замена цвета placeholder*/
+textarea::-webkit-input-placeholder { color: #80ADDD; }
+
+/* media tablet */
+
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1199px) {
+    .container {
+        max-width: 904px;
+    }
+    .header {
+        margin: 0;
+    }
+    .logo {
+        margin: 0;
+    }
+    .btn-burger {
+        display: block;
+    }
+    .header-navigation {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #005BBB;
+        padding: 228px 60px 148px;
+        color: #fff;
+    }
+    .menu-open .header-navigation,
+    .menu-open .header-navigation .dropdown {
+        display: block;
+    }
+    .menu-open .logo svg * {
+        fill: #fff;
+    }
+    .menu-open .nav a {
+        color: #fff;
+    }
+    .dropdown .form-message {
+        max-width: 904px;
+        border: solid 1px #fff;
+    }
+    .dropdown .text-message {
+        background-color: #005BBB;
+        color: #fff;
+    }
+    .dropdown .text-message:focus {
+        border: solid 1px #fff;
+    }
+    .dropdown .btn-send {
+        background-color: #fff;
+        color: #005BBB;
+    }
+    .dropdown .btn-send:hover {
+        background-color: #fff;
+    }
+    .main-section {
+        max-width: 904px;
+    }
+    .form-message {
+        margin: 56px auto 0;
+    }
+    .about-text {
+        font-size: 24px;
+    }
+    .history-parts {
+        display: block;
+    }
+    .section-title {
+        font-size: 30px;
+    }
+    .section-title:before,
+    .section-title:after {
+        width: 904px;
+    }
+    .section-title:after {
+        width: 452px; 
+        top: 53px;
+        left: 226px;
+    }
+    .history-parts div + div {
+        margin-top: 28px;
+    }
+}
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 1023px) {
+    .container {
+        max-width: 903px;
+    }
+    .header {
+        margin-top: 0;
+        padding: 0;
+    }
+    .logo {
+        display: none;
+    }
+    .btn-burger {
+        display: block;
+        z-index: 10;
+    }
+    .btn-burger,
+    .btn-close {
+        right: 20px;
+        top: 20px;
+    }
+    .menu-open .btn-burger svg {
+        fill: #fff;
+    }
+    .header-navigation {
+        padding: 120px 20px 60px;
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #005BBB;
+        color: #fff;
+    }
+    .menu-open .header-navigation,
+    .menu-open .header-navigation .dropdown {
+        display: block;
+    }
+    .menu-open .logo {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    .menu-open .logo svg * {
+        fill: #fff;
+    }
+    .menu-open .nav a {
+        color: #fff;
+    }
+    .nav {
+        display: block;
+        padding-top: 15px;
+    }
+    .nav a {
+        display: block;
+        margin: 0 0 48px;
+    }
+    .nav a+a {
+        margin-left: 0;
+    }
+    .dropdown .text-message {
+        background-color: #005BBB;
+        margin-bottom: 20px;
+        color: #fff;
+        border: solid 1px #fff;
+        min-height: 150px;
+    }
+    .dropdown .text-message:focus {
+        border: solid 1px #fff;
+    }
+    .dropdown .btn-send {
+        background-color: #fff;
+        color: #005BBB;
+    }
+    .dropdown .btn-send:hover {
+        background-color: #fff;
+    }
+    .form {
+        flex-direction: column;
+        padding: 0;
+    }
+    .slider {
+        padding-top: 0;
+    }
+    .slick-dots {
+        margin-top: 24px;
+    }
+    .slick-dots button {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .slick-active button {
+        width: 8px;
+        height: 8px;
+    }
+    .about {
+        padding: 64px 20px 0px;
+    }
+    .about-text {
+        font-size: 16px;
+    }
+    .history-parts {
+        display: block;
+    }
+    .history-parts div + div {
+        margin-top: 24px;
+    }
+    .section-title {
+        font-size: 20px;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .section-title:before,
+    .section-title:after {
+        width: 320px;
+    }
+    .section-title:after {
+        width: 320px; 
+        top: 41px;
+        left: 0;
+    }
+    .history {
+        padding: 64px 20px 0px;
+    }
+    .history-text {
+        font-size: 16px;
+        padding: 30px;
+    }
+    .history-text span {
+        font-size: 24px;
+        display: flex;
+    }
+    .about-us {
+        padding: 64px 20px 80px;
+    }
+    .form-message {
+        border: none;
+    }
+    .text-message {
+        border: solid 1px #005BBB;
+        min-height: 150px;
+        margin-bottom: 20px;
+    }
+}
